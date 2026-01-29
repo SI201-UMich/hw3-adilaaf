@@ -102,9 +102,9 @@ class CouponDispenser:
 
         Reminder: Use lists only (no dictionaries).
         """
-        number = 1
+        round_number = 1
         while True: 
-          user_input = input (f"Round {number} - Enter a name (or a comma-separated list), or type 'show' or 'exit': ")
+          user_input = input (f"Round {round_number} - Enter a name (or a comma-separated list), or type 'show' or 'exit': ")
 
           if user_input == "exit":
               print("Goodbye!")
@@ -119,7 +119,7 @@ class CouponDispenser:
                 if j != "":
                     print (self.issue_coupon(j))
 
-          number +=1
+          round_number +=1
                   
 
                   
