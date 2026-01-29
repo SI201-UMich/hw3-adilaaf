@@ -102,7 +102,24 @@ class CouponDispenser:
 
         Reminder: Use lists only (no dictionaries).
         """
-        pass
+        number = 1
+        while True: 
+          user_input = input (f"Round {number} - Enter a name (or a comma-separated list), or type 'show' or 'exit': ")
+
+          if user_input == "exit":
+              print("Goodbye!")
+              break
+          elif user_input == "show":
+              for i in range(len(self.customer_roster)):
+                  print(f"{self.customer_roster[i]}: {self.coupon_cards[self.issued_indices[i]]}")
+          else:
+              each_chunk = user_input.split(",")
+              for i in range(len(each_chunk)):
+                j = each_chunk[i].strip()
+                if j != "":
+                    print (self.issue_coupon(j))
+
+          number +=1
                   
 
                   
