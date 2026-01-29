@@ -140,8 +140,15 @@ class CouponDispenser:
         Returns:
             None
         """
-        # TODO: Implement per instructions
-        pass
+        if (len(self.issued_indices) == 0):
+            print ("Empty")
+            return
+        for coupon in range(len(self.coupon_cards)):
+            count = 0
+            for i in range(len(self.issued_indices)):
+                if self.issued_indices[i] == coupon:
+                    count +=1
+            print(f"{self.coupon_cards[coupon]} distribution count: {count}")
 
 
 def main():
@@ -442,6 +449,5 @@ def test():
 
 
 if __name__ == "__main__":
-    main()
-    # test()
+    test()
 
