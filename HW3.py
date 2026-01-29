@@ -148,17 +148,10 @@ class CouponDispenser:
             for i in range(len(self.issued_indices)):
                 if self.issued_indices[i] == coupon:
                     count +=1
-            print(f"{self.coupon_cards[coupon]} distribution count: {count}")
+            print(f"{self.coupon_cards[coupon]} distribution count: {count}.")
 
 
 def main():
-    """
-    Driver function:
-      - Define the coupon_cards list (example coupons below)
-      - Create a CouponDispenser
-      - Start the interaction via distribute_session()
-      - After exit, call tally_distribution() to print the distribution in the terminal
-    """
     coupon_cards = [
         "10% off",
         "Free small coffee",
@@ -167,10 +160,10 @@ def main():
     ]
 
     # Uncomment the lines below as you implement each function.
-    # box = CouponDispenser(coupon_cards)
-    # box.distribute_session()
-    # box.tally_distribution()
-    pass
+    box = CouponDispenser(coupon_cards)
+    box.distribute_session()
+    box.tally_distribution()
+    
 
 
 # -----------------------
